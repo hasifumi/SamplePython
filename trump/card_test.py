@@ -9,14 +9,29 @@ class CardClassTestCase(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testToStringMethod(self):
-        self.assertEqual(self.c1.toString(), "SK")
-
     def testGetNumberMethod(self):
         self.assertEqual(self.c1.getNumber(), 13)
 
     def testGetSuitMethod(self):
         self.assertEqual(self.c1.getSuit(), 1)
+
+    def testToStringMethod1(self):
+        self.assertEqual(card.Card(1,1).toString(), "SA")
+
+    def testToStringMethod2(self):
+        self.assertEqual(card.Card(2,2).toString(), "D2")
+
+    def testToStringMethod3(self):
+        self.assertEqual(card.Card(3,10).toString(), "CT")
+
+    def testToStringMethod4(self):
+        self.assertEqual(card.Card(4,11).toString(), "HJ")
+
+    def testToStringMethod5(self):
+        self.assertEqual(card.Card(1,12).toString(), "SQ")
+
+    def testToStringMethod6(self):
+        self.assertEqual(card.Card(1,13).toString(), "SK")
 
 class JorkerClassTestCase(unittest.TestCase):
 

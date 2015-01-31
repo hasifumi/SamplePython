@@ -7,7 +7,7 @@ class Hand:
 
     def addCard(self, card):
         self.hand.append(card)
-        print(len(self.hand))
+        #print(len(self.hand))
 
     def lookCard(self, position):
         if 0 <= position and position < len(self.hand):
